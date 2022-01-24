@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Indie+Flower&family=Ubuntu&display=swap"
+    rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/92b21ed5b0.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./style/index.css" />
+  <title>Magic Notes</title>
+</head>
+
+<body>
+  <!-- Navigation Bar      -->
+  <nav class="backgroundColor-d ubuntu">
+    <div class="color-l searchLink" onmouseover="displaySubmenu()">
+      <a href="#" class="color-l dropdown">
+        <span>Search Notes</span>
+        <i class="far fa-caret-square-down fa-2x"></i>
+      </a>
+      <div class="submenu" onmouseout="hideSubmenu()">
+        <ul>
+          <li><a href="#" onclick="searchNote(`title`)">By Title</a></li>
+          <li><a href="#" onclick="searchNote(`text`)">By Text</a></li>
+          <li><a href="#" onclick="searchNote(`date`)">By Date</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="searchBox"></div>
+  </nav>
+
+  <!-- Adding notes  -->
+
+  <div class="noteaddArea ubuntu" style="background-image: url('https://cdn.pixabay.com/photo/2019/05/06/03/53/seamless-4182184_960_720.png');">
+    <div>
+      <h1 class="color-l caveat">magic notes</h1>
+      <p class="color-l">A simple way to remember things.</p>
+    </div>
+    <div class="backgroundColor-d border-l">
+      <h2 class="color-l">Note-Tittle</h2>
+      <textarea name="" id="typedTitle" cols="40" rows="1" class="backgroundColor-l border-l txtarea ubuntu"></textarea>
+      <h2 class="color-l">Type your Note</h2>
+      <div>
+        <textarea name="" id="typedTxt" cols="40" rows="6" class="backgroundColor-l border-l txtarea ubuntu"></textarea>
+        <button class="backgroundColor-d border-l ubuntu" id="btn">
+          Submit
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Displaying notes -->
+
+  <div class="noteArea"></div>
+  <script src="./js/code.js"></script>
+</body>
+
+</html>
